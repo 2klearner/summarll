@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    #login {
+        background-color: white; /* Set the background color to white */
+        min-height: 100vh;
+    }
+
+    .form-control,
+    .btn {
+        border-radius: 0;
+    }
+</style>
+</head>
+ <body>
+  <div id="login">
+    <section>
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body p-md-5 mx-md-4">
+                <h2 class="text-center">Admin Login</h2> <!-- Add the heading here -->
+                <form>
+                  <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" [(ngModel)]="username" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <button (click)="checkLogin()" class="btn btn-info btn-md">
+                      Login
+                    </button>
+                  </div>
+                </form>
+                <div *ngIf="invalidLogin" class="alert alert-danger mt-3">
+                  {{ message }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

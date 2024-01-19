@@ -1,0 +1,35 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>View Reserved Tables</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Reservation Id</th>
+            <th>Reserved User</th>
+            <th>Table row</th>
+            <th>Reserved Date</th>
+            <th>Reserved Time</th>
+            <th>Reservation Status</th>
+            <th>Actions</th> <!-- New column for the action buttons -->
+          </tr>
+        </thead>
+        <tbody *ngIf="ReserveData != null">
+          <tr *ngFor="let item of ReserveData">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.tablerow }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ item.time }}</td>
+            <td>{{ item.status }}</td>
+            <td>
+              <button (click)="confirmReservation(item.id)" *ngIf="item.status === 'Pending'">Confirm</button>
+              <span *ngIf="item.status === 'Confirmed'">Confirmed</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

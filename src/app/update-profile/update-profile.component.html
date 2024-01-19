@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Update</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Update Profile</h2> <!-- Added title -->
+
+        <div [hidden]="updated" class="card p-4" style="max-width: 400px; margin: 0 auto;">
+            <form (ngSubmit)="updateProfile()" method="post">
+                <div class="form-group">
+                    <label for="name"><b>Name</b></label> <!-- Bold label -->
+                    <input type="text" class="form-control" id="name" [(ngModel)]="user.name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><b>Email</b></label> <!-- Bold label -->
+                    <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile"><b>Mobile</b></label> <!-- Bold label -->
+                    <input type="text" class="form-control" id="mobile" [(ngModel)]="user.mobile" name="mobile" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address"><b>Address</b></label> <!-- Bold label -->
+                    <input type="text" class="form-control" id="address" [(ngModel)]="user.address" name="address" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="newPassword"><b>New Password</b></label> <!-- Bold label -->
+                    <input type="password" class="form-control" id="newPassword" [(ngModel)]="newPassword" name="newPassword">
+                </div>
+
+                <button  type="submit" class="btn btn-success">Update Profile</button>
+            </form>
+        </div>
+        
+        <div [hidden]="!updated" class="mt-4 text-center">
+            <h4>Profile updated successfully!</h4>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and other scripts here -->
+</body>
+</html>
+

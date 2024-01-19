@@ -1,0 +1,26 @@
+<div class="search-bar">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search by name">
+    <button (click)="searchMenu()">Search</button>
+  </div>
+<h2>User Menu List</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let menu of menuItem">
+      <td>{{ menu.name }}</td>
+      <td>{{ menu.itemPrice }}</td>
+      <td>{{ menu.description }}</td>
+      <td>{{ menu.status }}</td>
+    </tr>
+  </tbody>
+</table>
+
+

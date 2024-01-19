@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <div class="app_wrap">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="thumbnail p-3">
+                    <div class="slider-container">
+                        <div class="image-slider" [style.transform]="'translateX(' + (-selectedImageIndex * slideWidth) + 'px)'">
+                            <img *ngFor="let image of images" [src]="image" class="slide-image img-fluid" />
+                        </div>
+                    </div>
+                    <div class="caption mt-3">
+                        <p class="caption-text">Baklawa Cafe Happy Moments</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer mt-4">
+        <a href="https://www.acedzn.com/experiments/" target="_blank">
+            <!-- <img src="assets/restologo.jpg" alt="Acedzn Logo" class="img-fluid" /> -->
+        </a>
+    </div>
+</div>

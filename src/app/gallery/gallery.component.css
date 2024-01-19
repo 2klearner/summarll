@@ -1,0 +1,69 @@
+/* Style for the app wrapper */
+.app_wrap {
+    background-color: #141414;
+    padding: 20px;
+}
+
+/* Style for the thumbnail container */
+.thumbnail {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    /* box-shadow: 0px 0px 10px rgba(238, 220, 220, 0.1); */
+}
+
+/* Style for the image slider */
+.image-slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Style for individual slide images */
+.slide-image {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+/* Style for the slider container */
+.slider-container {
+    overflow: hidden;
+}
+
+/* Style for the caption */
+.caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold; /* Added bold font weight */
+    color: #333;
+    background-color: #ffcc00; /* Changed background color */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Style for the footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for the footer logo image */
+.footer img {
+    max-width: 100px;
+}
+
+/* Add pigmentation style for active circle */
+.pigment {
+    background-color: #007bff;
+    color: #25eb1e;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

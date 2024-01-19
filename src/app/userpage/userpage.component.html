@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+        /* Apply styles directly within the <style> tag */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background-image: url('assets/admin.jpg'); /* Adjust the path as needed */
+            background-size: 100% 100%; /* Adjust the background size to cover the entire viewport */
+            background-position: center;
+            height: 120%;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .container h1, .container p {
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background for better text readability */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>User HOME PAGE</h1>
+        <p>Welcome User</p>
+    </div>
+</body>
+</html>

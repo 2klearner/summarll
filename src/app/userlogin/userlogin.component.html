@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      #login {
+          background-color: white; /* Set the background color to white */
+          min-height: 100vh;
+      }
+
+      .form-control,
+      .btn {
+          border-radius: 0;
+      }
+      </style>
+      </head>
+<body>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">User-Login</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form (ngSubmit)="checkUserLogin()">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Username:</label>
+                                <input type="text" name="username" id="username" [(ngModel)]="username" class="form-control" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label>
+                                <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control" required="true">
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info btn-md">Login</button>
+                            </div>
+                            <div *ngIf="invalidLogin" class="alert alert-danger mt-3">
+                                {{ message }}
+                              </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+

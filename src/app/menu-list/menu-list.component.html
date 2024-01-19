@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div id="menu-list" class="container-fluid">
+    <h2 class="text-center mt-4">Menu List</h2>
+     <!-- Success message alert -->
+     <div class="alert alert-danger mt-3" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped mt-4">
+        <thead class="thead-dark">
+          <tr>
+            <th width="20%">Name</th>
+            <th width="20%">Price</th>
+            <th width="30%">Description</th>
+            <th width="15%">Status</th>
+            <th width="15%" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let menu of menuItem">
+            <td>{{menu.name}}</td>
+            <td>{{menu.itemPrice}}</td>
+            <td>{{menu.description}}</td>
+            <td>{{menu.status}}</td>
+            <td class="text-center">
+              <button (click)="updateMenu(menu.name)" class="btn btn-info">Update</button>
+              <button (click)="deleteMenu(menu.name)" class="btn btn-danger ml-2">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
