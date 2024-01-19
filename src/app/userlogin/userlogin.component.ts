@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../usermodel';
@@ -6,7 +6,7 @@ import { User } from '../usermodel';
 @Component({
   selector: 'app-userlogin',
   templateUrl: './userlogin.component.html',
-  styleUrl: './userlogin.component.css'
+  styleUrls: ['./userlogin.component.css']
 })
 export class UserloginComponent implements OnInit{
   ngOnInit(): void {

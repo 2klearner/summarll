@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
-import { Tables } from '../tablemodel';
 import { AdminService } from '../admin.service';
+import { Tables } from '../tablemodel';
 
 @Component({
   selector: 'app-addtables',
   templateUrl: './addtables.component.html',
-  styleUrl: './addtables.component.css'
+  styleUrls: ['./addtables.component.css']
 })
 export class AddtablesComponent implements OnInit {
   table:Tables=new Tables();

@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-adminlogout',
   templateUrl: './adminlogout.component.html',
-  styleUrl: './adminlogout.component.css'
+  styleUrls: ['./adminlogout.component.css']
 })
 export class AdminlogoutComponent implements OnInit {
 

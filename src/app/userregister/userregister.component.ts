@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from '../usermodel';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-userregister',
   templateUrl: './userregister.component.html',
-  styleUrl: './userregister.component.css'
+  styleUrls: ['./userregister.component.css']
 })
 export class UserregisterComponent implements OnInit {
   user:User=new User();
@@ -28,4 +29,3 @@ export class UserregisterComponent implements OnInit {
     this.addItemSave();
   }
 }
-

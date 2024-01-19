@@ -6,12 +6,10 @@ describe('ConfirmReservationComponent', () => {
   let component: ConfirmReservationComponent;
   let fixture: ComponentFixture<ConfirmReservationComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [ConfirmReservationComponent]
-    })
-    .compileComponents();
-    
+    });
     fixture = TestBed.createComponent(ConfirmReservationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

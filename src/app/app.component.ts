@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { AdminService } from './admin.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cafereservation';
-}
+  title = 'Baklawa Cafe';
+  constructor(public adminLogin:AdminService,public userLogin:UserService){}
+    ngOnInit(){
+
+    }
+  }
+

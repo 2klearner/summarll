@@ -1,9 +1,9 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable, catchError, throwError } from "rxjs";
-import { Admin } from "./admin";
-import { Menu } from "./menu";
-
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Menu } from './menu';
+import { Admin } from './admin';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class AdminService {
 
 
   authentication(username:string,password:string){
-    if(username==="Admin" && password==="Admin"){
+    if(username==="abi" && password==="123456"){
     sessionStorage.setItem('adminname',username)
     return true;
     }else{

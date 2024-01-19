@@ -8,10 +8,12 @@ describe('UserlogoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserlogoutComponent]
+      declarations: [ UserlogoutComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(UserlogoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

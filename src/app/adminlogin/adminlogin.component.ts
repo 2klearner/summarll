@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
-
 @Component({
   selector: 'app-adminlogin',
   templateUrl: './adminlogin.component.html',
-  styleUrl: './adminlogin.component.css'
+  styleUrls: ['./adminlogin.component.css']
 })
 export class AdminloginComponent implements OnInit {
   message:string = '';

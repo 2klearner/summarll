@@ -1,13 +1,14 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '../user.service';
-import { User } from '../usermodel';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../user.service'; // Update the import path based on your project structure
+import { Router } from '@angular/router'; // Import the Router
+
+import { User } from '../usermodel'; // Update the import path for your User model
 
 @Component({
   selector: 'app-update-profile',
   templateUrl: './update-profile.component.html',
-  styleUrl: './update-profile.component.css'
+  styleUrls: ['./update-profile.component.css']
 })
 export class UpdateProfileComponent implements OnInit {
   updateProfileForm: FormGroup = new FormGroup({});

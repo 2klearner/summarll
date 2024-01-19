@@ -5,7 +5,7 @@ import { UserService } from '../user.service';
 @Component({
   selector: 'app-user-menu-list',
   templateUrl: './user-menu-list.component.html',
-  styleUrl: './user-menu-list.component.css'
+  styleUrls: ['./user-menu-list.component.css']
 })
 export class UserMenuListComponent implements OnInit {
   menuItem: Menu[] = [];

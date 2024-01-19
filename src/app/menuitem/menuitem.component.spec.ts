@@ -6,12 +6,10 @@ describe('MenuitemComponent', () => {
   let component: MenuitemComponent;
   let fixture: ComponentFixture<MenuitemComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [MenuitemComponent]
-    })
-    .compileComponents();
-    
+    });
     fixture = TestBed.createComponent(MenuitemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

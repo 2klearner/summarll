@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Menu } from '../menu'
+import { MenuService } from '../menu.service'
 import { Router } from '@angular/router';
-import { Menu } from '../menu';
-import { MenuService } from '../menu.service';
-
 @Component({
   selector: 'app-menu-list',
   templateUrl: './menu-list.component.html',
-  styleUrl: './menu-list.component.css'
+  styleUrls: ['./menu-list.component.css']
 })
 export class MenuListComponent implements OnInit {
   successMessage:String='';

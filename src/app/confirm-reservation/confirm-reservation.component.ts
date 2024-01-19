@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Reservation } from '../tablemodel';
+import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
+import { Tables, Reservation} from '../tablemodel';
 
 @Component({
   selector: 'app-confirm-reservation',
   templateUrl: './confirm-reservation.component.html',
-  styleUrl: './confirm-reservation.component.css'
+  styleUrls: ['./confirm-reservation.component.css']
 })
 export class ConfirmReservationComponent implements OnInit {
   ReserveData?:Reservation[];

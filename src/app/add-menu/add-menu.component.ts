@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-
+import { Menu } from '../menu';
 import { MenuService } from '../menu.service';
 import { Router } from '@angular/router';
-import { Menu } from '../menu';
 
 @Component({
   selector: 'app-add-menu',
   templateUrl: './add-menu.component.html',
-  styleUrl: './add-menu.component.css'
+  styleUrls: ['./add-menu.component.css']
 })
 export class AddMenuComponent {
-
   menu: Menu = new Menu();
   successMessage: string = ''; // Variable to hold success message
 

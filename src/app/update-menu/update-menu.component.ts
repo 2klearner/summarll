@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Menu } from '../menu';
 import { MenuService } from '../menu.service';
+import { Menu } from '../menu';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-menu',
   templateUrl: './update-menu.component.html',
-  styleUrl: './update-menu.component.css'
+  styleUrls: ['./update-menu.component.css']
 })
 export class UpdateMenuComponent implements OnInit {
 

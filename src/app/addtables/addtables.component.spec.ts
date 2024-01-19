@@ -8,10 +8,12 @@ describe('AddtablesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AddtablesComponent]
+      declarations: [ AddtablesComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(AddtablesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

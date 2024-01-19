@@ -5,7 +5,7 @@ import { UserService } from '../user.service';
 @Component({
   selector: 'app-userlogout',
   templateUrl: './userlogout.component.html',
-  styleUrl: './userlogout.component.css'
+  styleUrls: ['./userlogout.component.css']
 })
 export class UserlogoutComponent implements OnInit {
 

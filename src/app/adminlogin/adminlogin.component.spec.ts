@@ -8,10 +8,12 @@ describe('AdminloginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AdminloginComponent]
+      declarations: [ AdminloginComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(AdminloginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

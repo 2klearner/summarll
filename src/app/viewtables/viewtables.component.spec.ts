@@ -8,10 +8,12 @@ describe('ViewtablesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ViewtablesComponent]
+      declarations: [ ViewtablesComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(ViewtablesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

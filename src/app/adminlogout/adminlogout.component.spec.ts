@@ -8,10 +8,12 @@ describe('AdminlogoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AdminlogoutComponent]
+      declarations: [ AdminlogoutComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(AdminlogoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

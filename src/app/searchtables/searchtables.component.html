@@ -1,71 +1,71 @@
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
 
-<body>
-    <div id="login" style="background-color: rgb(194, 185, 194);">
-        <h3 class="text-center text-white pt-5">Search form</h3>
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
+    <body>
+        <div id="login" style="background-color: rgb(194, 185, 194);">
+            <h3 class="text-center text-white pt-5">Search form</h3>
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
 
-                            <h3 class="text-center text-info">Search Tables</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Table Rows:</label><br>
-                                <input type="text" name="username" id="username" [(ngModel)]="tablerow" class="form-control">
-                            </div>
+                                <h3 class="text-center text-info">Search Tables</h3>
+                                <div class="form-group">
+                                    <label for="username" class="text-info">Table Rows:</label><br>
+                                    <input type="text" name="username" id="username" [(ngModel)]="tablerow" class="form-control">
+                                </div>
 
-                            <div class="form-group">
-                              <button (click)=onTableSearch() class="btn btn-info btn-md">
-                                Search
-                              </button>
-                            </div>
+                                <div class="form-group">
+                                  <button (click)=onTableSearch() class="btn btn-info btn-md">
+                                    Search
+                                  </button>
+                                </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 <div class="panel panel-primary">
-<div class="panel-heading">
-  <h2>Search Result</h2>
-</div>
-<div class="panel-body">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Table Id</th>
-        <th>Table row</th>
-        <th>Table Number</th>
-        <th>Table Capacity</th>
-        <th>Table Type</th>
-      <th>Reserve </th>
-
-      </tr>
-    </thead>
-    <tbody *ngIf="table!=null">
-
-      <tr *ngFor="let item of table">
-
-      <td>{{item.id}}</td>
-      <td>{{item.tablerow}}</td>
-      <td>{{item.tablenumber}}</td>
-      <td>{{item.tablecapacity}}</td>
-      <td>{{item.tabletype}}</td>
-      <td>
-      <input type ="date" [(ngModel)]="selectedDate" />
-      <input type ="time" [(ngModel)]="selectedTime" />
-      </td>
-      <td><button (click)="reserveTable(item.id,selectedDate,selectedTime)" class="btn btn-success">Reserve</button></td>
-      </tr>
-
-    </tbody>
-  </table>
-
-</div>
-</div>
+    <div class="panel-heading">
+      <h2>Search Result</h2>
     </div>
-</body>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Table Id</th>
+            <th>Table row</th>
+            <th>Table Number</th>
+            <th>Table Capacity</th>
+            <th>Table Type</th>
+          <th>Reserve </th>
+
+          </tr>
+        </thead>
+        <tbody *ngIf="table!=null">
+
+          <tr *ngFor="let item of table">
+
+          <td>{{item.id}}</td>
+          <td>{{item.tablerow}}</td>
+          <td>{{item.tablenumber}}</td>
+          <td>{{item.tablecapacity}}</td>
+          <td>{{item.tabletype}}</td>
+          <td>
+          <input type ="date" [(ngModel)]="selectedDate" />
+          <input type ="time" [(ngModel)]="selectedTime" />
+          </td>
+          <td><button (click)="reserveTable(item.id,selectedDate,selectedTime)" class="btn btn-success">Reserve</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+        </div>
+    </body>

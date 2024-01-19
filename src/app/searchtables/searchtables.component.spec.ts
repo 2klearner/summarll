@@ -8,10 +8,12 @@ describe('SearchtablesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SearchtablesComponent]
+      declarations: [ SearchtablesComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(SearchtablesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
